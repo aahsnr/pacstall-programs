@@ -1,0 +1,21 @@
+pkgbase = rhino-setup-bin
+	gives = rhino-setup
+	pkgver = 2025.3
+	pkgdesc = Rhino Linux Setup Prompt
+	arch = arm64
+	arch = amd64
+	depends = gettext
+	depends = desktop-file-utils
+	depends = libadwaita-1-0
+	depends = uidmap
+	depends = pkexec
+	replaces = rhino-setup
+	replaces = rhino-setup-git
+	incompatible = debian:*
+	maintainer = Oren Klopfer <oren@taumoda.com>
+	source_arm64 = https://github.com/rhino-linux/rhino-setup/releases/download/v2025.3/rhino-setup_v2025.3_arm64.zip
+	sha256sums_arm64 = 26fdc09cc4a31a71f8dcf8fcbd96cacf94f5fd9e61a224b1905f15f73b8c1261
+	source_amd64 = https://github.com/rhino-linux/rhino-setup/releases/download/v2025.3/rhino-setup_v2025.3_amd64.zip
+	sha256sums_amd64 = 9e2708a67b8310342a235be3bf91fd8ee7847f0993edf3681dae3932d939ca54
+
+pkgname = rhino-setup-bin

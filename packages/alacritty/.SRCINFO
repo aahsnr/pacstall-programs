@@ -1,0 +1,21 @@
+pkgbase = alacritty
+	pkgver = 0.15.1
+	pkgdesc = A fast, cross-platform, OpenGL terminal emulator
+	arch = any
+	makedepends = cargo
+	makedepends = cmake
+	makedepends = pkg-config
+	makedepends = libfreetype6-dev
+	makedepends = libfontconfig1-dev
+	makedepends = libxcb-xfixes0-dev
+	makedepends = python3
+	makedepends = gzip
+	makedepends = scdoc
+	incompatible = debian:bullseye
+	incompatible = debian:bookworm
+	maintainer = Warofzen <warofzen1@protonmail.com>
+	repology = project: alacritty
+	source = @alacritty~0.15.1::https://github.com/alacritty/alacritty/archive/refs/tags/v0.15.1.tar.gz
+	sha256sums = b814e30c6271ae23158c66e0e2377c3600bb24041fa382a36e81be564eeb2e36
+
+pkgname = alacritty

@@ -1,0 +1,9 @@
+pkgname="opera-beta-deb"
+gives="opera-beta"
+# repology=("project: ${gives}")
+pkgver="120.0.5543.12"
+source=("https://deb.opera.com/opera/pool/non-free/o/opera-beta/${gives}_${pkgver}_amd64.deb")
+pkgdesc="Opera is a fast, secure, and user-friendly web browser - Beta"
+sha256sums=("452b083b5b51b8232b3f5991507e0d5d832f91858ac80ea02dc2dbd9a463de20")
+arch=('amd64')
+maintainer=("Oren Klopfer <oren@taumoda.com>")

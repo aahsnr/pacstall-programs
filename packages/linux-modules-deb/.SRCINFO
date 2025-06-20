@@ -1,0 +1,13 @@
+pkgbase = linux-modules-deb
+	gives = linux-modules-6.16.0-061600rc2-generic
+	pkgver = 6.16~rc2
+	pkgdesc = Ubuntu Linux mainline kernel (Linux Modules)
+	arch = arm64
+	arch = amd64
+	maintainer = Oren Klopfer <oren@taumoda.com>
+	source_arm64 = https://kernel.ubuntu.com/~kernel-ppa/mainline/v6.16-rc2/arm64/linux-modules-6.16.0-061600rc2-generic_6.16.0-061600rc2.202506152144_arm64.deb
+	sha256sums_arm64 = 45989a262554785ee1fc5e5b5d5d7e40d1582d5fab30db0decc148ff92624175
+	source_amd64 = https://kernel.ubuntu.com/~kernel-ppa/mainline/v6.16-rc2/amd64/linux-modules-6.16.0-061600rc2-generic_6.16.0-061600rc2.202506152144_amd64.deb
+	sha256sums_amd64 = 47717eb84110ea6fcebee1c58b2918b3962ba767af0246f7c9fa884fdff1d4e7
+
+pkgname = linux-modules-deb
