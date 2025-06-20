@@ -1,5 +1,6 @@
 pkgbase="nerd-fonts"
 pkgname=(
+  "ttf-nerd-fonts-symbols"
   "ttf-jetbrains-mono-nerd"
   "ttf-ubuntu-mono-nerd"
   "ttf-ubuntu-nerd"
