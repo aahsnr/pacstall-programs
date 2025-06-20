@@ -12,7 +12,7 @@ url='https://github.com/ryanoasis/nerd-fonts'
 _urlbase="${url}/releases/download/v${pkgver}"
 license=('MIT' 'OFL-1.1')
 provides=('ttf-font-nerd')
-maintainer=("Oren Klopfer <oren@taumoda.com>")
+maintainer=("Ahsanur Rahman <ahsanur041@proton.me")
 source=(
   "symbolsonly-${pkgver}.tar.xz::${_urlbase}/NerdFontsSymbolsOnly.tar.xz"
   "jetbrainsmono-${pkgver}.tar.xz::${_urlbase}/JetBrainsMono.tar.xz"
@@ -45,7 +45,6 @@ package_ttf-nerd-fonts-symbols() {
   install -Dm644 symbolsonly/*.ttf -t "${pkgdir}/usr/share/fonts/TTF"
   install -Dm644 symbolsonly/LICENSE -t "${pkgdir}/usr/share/licenses/${pacname}/"
 }
-
 
 package_ttf-jetbrains-mono-nerd() {
   pkgdesc="Patched font JetBrains Mono from nerd fonts library"
