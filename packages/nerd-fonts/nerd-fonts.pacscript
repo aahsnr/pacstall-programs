@@ -13,11 +13,13 @@ license=('MIT' 'OFL-1.1')
 provides=('ttf-font-nerd')
 maintainer=("Oren Klopfer <oren@taumoda.com>")
 source=(
+  "symbolsonly-${pkgver}.tar.xz::${_urlbase}/NerdFontsSymbolsOnly.tar.xz"
   "jetbrainsmono-${pkgver}.tar.xz::${_urlbase}/JetBrainsMono.tar.xz"
   "ubuntu-${pkgver}.tar.xz::${_urlbase}/Ubuntu.tar.xz"
   "ubuntumono-${pkgver}.tar.xz::${_urlbase}/UbuntuMono.tar.xz"
 )
 sha256sums=(
+  '7f8c090da3b0eaa7108646bf34cbbb6ed13d5358a72460522108b06c7ecd716a'
   'ef552a3e638f25125c6ad4c51176a6adcdce295ab1d2ffacf0db060caf8c1582'
   '534bf0ffb311a993fd23666a7f3e4f4a0cfc0662abfa8b81594705cceefb69e3'
   'a13cf890ef10517c59e812ced167245f2db47d37d2b03c9fb43ddef023a3e776'
@@ -32,6 +34,17 @@ prepare() {
     tar -xf "${_font}-${pkgver}.tar.xz" -C "${_font}"
   done
 }
+
+package_ttf-nerd-fonts-symbols() {
+  pkgdesc="Patched font JetBrains Mono from nerd fonts library"
+  license=('MIT')
+  conflicts=(nerd-fonts-symbols)
+  replaces=(nerd-fonts-symbols)
+
+  install -Dm644 symbolsonly/*.ttf -t "${pkgdir}/usr/share/fonts/TTF"
+  install -Dm644 symbolsonly/LICENSE -t "${pkgdir}/usr/share/licenses/${pacname}/"
+}
+
 
 package_ttf-jetbrains-mono-nerd() {
   pkgdesc="Patched font JetBrains Mono from nerd fonts library"
