@@ -41,9 +41,9 @@ GPM=              # Mouse support in Linux console using gpmd.
 NOTKIT=           # Use no toolkit widgets. Like B&W Twm (001d sk00l).
                   # Bitmap fonts only, 1337!
 
-PGTK=             # Use native GTK3 build. Supports Wayland, yay!
+PGTK="YES"             # Use native GTK3 build. Supports Wayland, yay!
 
-GTK3="YES"        # GTK3 old windowing interface.
+GTK3=             # GTK3 old windowing interface.
 
 LUCID=            # Use the lucid, a.k.a athena, toolkit. Like XEmacs, sorta.
                   #
@@ -114,7 +114,7 @@ fi
 
 if [[ ${JIT} == "YES" ]]; then
   if [[ ${CLI} == "YES" ]]; then
-    depends_nox+=("libgccjit0" "libgccjit-12-dev | libgccjit-11-dev")
+    depends_nox+=("libgccjit0" "libgccjit-14-dev")
   else
     depends+=("libgccjit0" "libgccjit-14-dev")
   fi
