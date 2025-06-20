@@ -180,20 +180,16 @@ prepare() {
 build() {
   cd "${pkgname}~${pkgver}"
   local _conf=(
-    --prefix=/usr
-    --sysconfdir=/etc
-    --libexecdir=/usr/lib
-    --localstatedir=/var
-    --mandir=/usr/share/man
-    --with-gameuser=:games
+    --disable-build-details
+    --with-mailutils
+    --with-imagemagick
+    --with-tree-sitter
     --with-modules
-    --without-libotf
-    --without-m17n-flt
-    # Beware https://debbugs.gnu.org/cgi/bugreport.cgi?bug=25228
-    # dconf and gconf break font settings you set in ~/.emacs.
-    # If you insist you'll need to read that bug report in *full*.
-    # Good luck!
-    --without-gconf
+    --with-threads
+    --with-sqlite3
+    --with-cairo
+    --with-harfbuzz
+    --with-libsystemd
   )
   if [[ ${CLANG} == "YES" ]]; then
     _conf+=("--enable-autodepend")
